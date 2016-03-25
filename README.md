@@ -25,7 +25,7 @@ This container brings a seebox based on Ubuntu 14.04 and transmission-daemon.
     "download-dir": "/var/lib/transmission-daemon/downloads",
     "download-limit": 1024,
     "download-limit-enabled": 0,
-    "download-queue-enabled": false,
+    "download-queue-enabled": true,
     "download-queue-size": 5,
     "encryption": 1,
     "idle-seeding-limit": 30,
