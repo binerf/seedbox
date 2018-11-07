@@ -9,6 +9,7 @@ ENV HOME /root
 # Install base packages
 RUN apt-get update -y
 RUN apt-get install software-properties-common \
+	sudo \
 	-y
 
 # Add PPA Repository
