@@ -6,9 +6,13 @@ MAINTAINER binerf <seedbox@mygaia.org>
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
 
+# Install base packages
+RUN apt-get install software-properties-common \
+	-y --allow
+
 # Add PPA Repository
-RUN echo "deb http://ppa.launchpad.net/transmissionbt/ppa/ubuntu bionic main" > /etc/apt/sources.list.d/transmissionbt-ppa-bionic.list
-#RUN add-apt-repository ppa:transmissionbt/ppa -y
+#RUN echo "deb http://ppa.launchpad.net/transmissionbt/ppa/ubuntu bionic main" > /etc/apt/sources.list.d/transmissionbt-ppa-bionic.list
+RUN add-apt-repository ppa:transmissionbt/ppa -y
 
 # Update package lists
 RUN apt-get update -y
