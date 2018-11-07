@@ -1,5 +1,5 @@
 # What for ?
-This container brings a seebox based on Ubuntu 14.04 and transmission-daemon.
+This container brings a seebox based on Ubuntu 18.04 and transmission-daemon.
 
 # Prerequisites
 * On server which hosts container, create a folder (owner 102:105) including subfolders below:
@@ -93,4 +93,4 @@ Update it according to your configuration.
            binerf/seedbox
 
 Then access to URL http://HOST_IP:9091
-(possibility to configure an Nnginx/Apache instance as proxy in front of your seedbox container) 
+(possibility to configure an Nginx/Apache instance as proxy in front of your seedbox container) 
