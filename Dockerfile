@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
 
 # Add PPA Repository
-RUN echo "deb http://ppa.launchpad.net/transmissionbt/ppa/ubuntu trusty main" > /etc/apt/sources.list.d/transmissionbt-ppa-trusty.list
+RUN echo "deb http://ppa.launchpad.net/transmissionbt/ppa/ubuntu bionic main" > /etc/apt/sources.list.d/transmissionbt-ppa-bionic.list
 
 # Update package lists
 RUN apt-get update -y
