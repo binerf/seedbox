@@ -7,8 +7,9 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
 
 # Install base packages
+RUN apt-get update -y
 RUN apt-get install software-properties-common \
-	-y --allow
+	-y
 
 # Add PPA Repository
 #RUN echo "deb http://ppa.launchpad.net/transmissionbt/ppa/ubuntu bionic main" > /etc/apt/sources.list.d/transmissionbt-ppa-bionic.list
@@ -22,7 +23,7 @@ RUN apt-get -y dist-upgrade
 RUN apt-get install transmission-cli \
 	transmission-common \
 	transmission-daemon \
-	-y --allow
+	-y
 
 VOLUME /var/lib/transmission-daemon
 RUN chown -R debian-transmission:debian-transmission /var/lib/transmission-daemon
