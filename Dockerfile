@@ -8,6 +8,7 @@ ENV HOME /root
 
 # Add PPA Repository
 RUN echo "deb http://ppa.launchpad.net/transmissionbt/ppa/ubuntu bionic main" > /etc/apt/sources.list.d/transmissionbt-ppa-bionic.list
+#RUN add-apt-repository ppa:transmissionbt/ppa -y
 
 # Update package lists
 RUN apt-get update -y
@@ -17,7 +18,7 @@ RUN apt-get -y dist-upgrade
 RUN apt-get install transmission-cli \
 	transmission-common \
 	transmission-daemon \
-	-y --force-yes
+	-y --allow
 
 VOLUME /var/lib/transmission-daemon
 RUN chown -R debian-transmission:debian-transmission /var/lib/transmission-daemon
